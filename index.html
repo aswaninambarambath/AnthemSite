@@ -1,0 +1,260 @@
+---
+layout: default
+---
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container">
+    <div class="logo">ANTHEM</div>
+    <ul class="nav-links">
+      {% for link in site.data.nav.links %}
+      <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      {% endfor %}
+      <li><a href="{{ site.data.nav.cta_url }}" class="nav-cta">{{ site.data.nav.cta_label }}</a></li>
+    </ul>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag reveal"><span class="dot"></span> {{ site.data.hero.tag }}</div>
+        <h1 class="reveal reveal-delay-1">{{ site.data.hero.title_line1 }}<br>{{ site.data.hero.title_line2 }} <span class="gold">{{ site.data.hero.title_highlight }}</span></h1>
+        <p class="reveal reveal-delay-2">{{ site.data.hero.description }}</p>
+        <div class="hero-buttons reveal reveal-delay-3">
+          <a href="#contact" class="btn-primary">{{ site.data.hero.button_primary }} &rarr;</a>
+          <a href="#pillars" class="btn-secondary">{{ site.data.hero.button_secondary }}</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="hero-orb">
+          <div class="orb-ring orb-ring-1"></div>
+          <div class="orb-ring orb-ring-2"></div>
+          <div class="orb-text">
+            <div class="letters">BOT</div>
+            <div class="sub">Lifecycle Model</div>
+          </div>
+          <div class="orb-badge orb-badge-1">&#9670; {{ site.data.hero.badge1 }}</div>
+          <div class="orb-badge orb-badge-2">&#9670; {{ site.data.hero.badge2 }}</div>
+          <div class="orb-badge orb-badge-3">&#9670; {{ site.data.hero.badge3 }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    {% for i in (1..2) %}
+    <span>Strategy</span><span class="sep">&bull;</span>
+    <span>Technology</span><span class="sep">&bull;</span>
+    <span>Operations</span><span class="sep">&bull;</span>
+    <span>Talent Acquisition</span><span class="sep">&bull;</span>
+    <span>Growth Marketing</span><span class="sep">&bull;</span>
+    <span>Market Expansion</span><span class="sep">&bull;</span>
+    <span>Brand Positioning</span><span class="sep">&bull;</span>
+    <span>Exit Planning</span><span class="sep">&bull;</span>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      {% for stat in site.data.stats %}
+      <div class="stat-item reveal">
+        <h3>{{ stat.value }}</h3>
+        <p>{{ stat.label }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" id="pillars">
+  <div class="container">
+    <div class="pillars-header reveal">
+      <span class="section-label">{{ site.data.pillars.section_label }}</span>
+      <h2 class="section-title">{{ site.data.pillars.section_title }}</h2>
+      <p class="section-subtitle">{{ site.data.pillars.section_subtitle }}</p>
+    </div>
+    <div class="pillar-grid">
+      {% for pillar in site.data.pillars.items %}
+      <div class="pillar-card reveal">
+        <span class="pillar-number">{{ pillar.number }}</span>
+        <div class="pillar-icon">&#9881;</div>
+        <h3>{{ pillar.title }}</h3>
+        <p class="desc">{{ pillar.description }}</p>
+        <div class="pillar-tags">
+          {% for tag in pillar.tags %}
+          <span class="pillar-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <div class="pillar-outcome">{{ pillar.outcome }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- BOT MODEL -->
+<section class="bot-model" id="model">
+  <div class="container">
+    <div class="bot-content">
+      <div class="bot-left reveal">
+        <span class="section-label">{{ site.data.methodology.section_label }}</span>
+        <h2 class="section-title">{{ site.data.methodology.section_title }}</h2>
+        <p class="section-subtitle">{{ site.data.methodology.section_subtitle }}</p>
+        <p class="section-subtitle" style="margin-top:1rem;">{{ site.data.methodology.section_extra }}</p>
+      </div>
+      <div class="timeline reveal reveal-delay-1">
+        {% for step in site.data.methodology.steps %}
+        <div class="timeline-item">
+          <div class="timeline-dot">{{ step.letter }}</div>
+          <div class="timeline-content">
+            <h4>{{ step.title }}</h4>
+            <p>{{ step.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder" id="founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-image-wrap reveal">
+        <div class="founder-image-frame">
+          <img src="{{ site.data.founder.image }}" alt="{{ site.data.founder.name }}">
+        </div>
+        <div class="founder-badge">{{ site.data.founder.badge }}</div>
+      </div>
+      <div class="founder-text reveal reveal-delay-1">
+        <span class="section-label">{{ site.data.founder.section_label }}</span>
+        <h3>{{ site.data.founder.name }}</h3>
+        <div class="role">{{ site.data.founder.role }}</div>
+        <p>{{ site.data.founder.bio_paragraph1 }}</p>
+        <p>{{ site.data.founder.bio_paragraph2 }}</p>
+        <div class="founder-highlights">
+          {% for item in site.data.founder.highlights %}
+          <div class="highlight-item">
+            <div class="emoji">{{ item.emoji }}</div>
+            <h5>{{ item.title }}</h5>
+            <p>{{ item.description }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section class="who-we-help" id="clients">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">{{ site.data.clients.section_label }}</span>
+      <h2 class="section-title">{{ site.data.clients.section_title }}</h2>
+    </div>
+    <div class="help-grid">
+      {% for client in site.data.clients.items %}
+      <div class="help-card reveal">
+        <div class="icon-wrap">{{ client.icon }}</div>
+        <h4>{{ client.title }}</h4>
+        <p>{{ client.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section class="recognition" id="recognition">
+  <div class="container">
+    <div class="recog-content">
+      <div class="reveal">
+        <span class="section-label">{{ site.data.recognition.section_label }}</span>
+        <h2 class="section-title">{{ site.data.recognition.section_title }}</h2>
+        <p class="section-subtitle">{{ site.data.recognition.section_subtitle }}</p>
+      </div>
+      <div class="recog-badges reveal reveal-delay-1">
+        {% for badge in site.data.recognition.badges %}
+        <div class="recog-badge">
+          <div class="badge-icon">{{ badge.icon }}</div>
+          <h4>{{ badge.title }}</h4>
+          <p>{{ badge.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="insights" id="insights">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-label">Insights & Perspectives</span>
+      <h2 class="section-title">Ideas That Drive Growth</h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Practical insights on entrepreneurship, technology, business strategy, and global market expansion.</p>
+    </div>
+    <div class="insights-grid">
+      {% for post in site.posts %}
+      <div class="insight-card reveal">
+        <div class="insight-thumb">{{ post.icon }}</div>
+        <div class="insight-body">
+          <span class="tag">{{ post.category }}</span>
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.excerpt }}</p>
+          <a href="{{ post.url }}" class="read-more">Read Article &rarr;</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="container reveal">
+    <span class="section-label">{{ site.data.cta.section_label }}</span>
+    <h2>{{ site.data.cta.title_line1 }}<br>{{ site.data.cta.title_line2 }} <span style="background:var(--gradient-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">{{ site.data.cta.title_highlight }}</span></h2>
+    <p>{{ site.data.cta.description }}</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-primary">{{ site.data.cta.button_primary }} &rarr;</a>
+      <a href="#" class="btn-secondary">{{ site.data.cta.button_secondary }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">ANTHEM</div>
+        <p>Global IT and business consulting firm delivering end-to-end Build Operate Scale Transfer solutions for startups, enterprises, and multinational organizations.</p>
+      </div>
+      <div class="footer-col"><h5>Company</h5><a href="#">About Us</a><a href="#">Our Model</a><a href="#">Founder</a><a href="#">Careers</a></div>
+      <div class="footer-col"><h5>Solutions</h5><a href="#">Build</a><a href="#">Operate</a><a href="#">Scale</a><a href="#">Transfer</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="#">Blog</a><a href="#">Contact Us</a><a href="#">LinkedIn</a><a href="#">Facebook</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Anthem Consultancy Services. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="Instagram">ig</a>
+      </div>
+    </div>
+  </div>
+</footer>
