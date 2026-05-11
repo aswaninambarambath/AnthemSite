@@ -1,0 +1,11 @@
+section_label: "Recognition & Ecosystem"
+section_title: "Built on a Foundation of Innovation"
+section_subtitle: "Anthem operates within a strong innovation ecosystem and has received recognition from leading startup initiatives in India, reflecting a deep commitment to innovation, entrepreneurship, and building technology-driven businesses."
+
+badges:
+  - icon: "🇮🇳"
+    title: "Startup India"
+    description: "Recognized under the Startup India Standup India initiative by the Government of India"
+  - icon: "🔬"
+    title: "Kerala Startup Mission"
+    description: "Incubated by one of India's leading startup development initiatives"

@@ -1,0 +1,18 @@
+title: Anthem Consultancy Services
+description: Global IT and Business Consulting | Build. Operate. Scale. Transfer.
+url: ""
+baseurl: ""
+permalink: /blog/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-seo-tag

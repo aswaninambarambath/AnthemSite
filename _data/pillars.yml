@@ -1,0 +1,42 @@
+section_label: "What We Do"
+section_title: "A Lifecycle Model for Building & Scaling Businesses"
+section_subtitle: "Four integrated phases that take organizations from concept to independent, sustainable success."
+
+items:
+  - number: "01"
+    title: "Build"
+    description: "Turning ideas into operational foundations. We help organizations transform concepts into structured, market-ready businesses by establishing strategy, technology foundations, and brand identity required for sustainable growth."
+    tags:
+      - "Strategy"
+      - "Product Design"
+      - "Technology"
+      - "Branding"
+    outcome: "Outcome: We create the business."
+
+  - number: "02"
+    title: "Operate"
+    description: "Running and strengthening business operations. We support organizations in managing and optimizing day-to-day operations by implementing structured processes, building high-performing teams, and ensuring operational stability."
+    tags:
+      - "Operations Management"
+      - "Talent Acquisition"
+      - "Process Optimization"
+    outcome: "Outcome: We run and stabilize the business."
+
+  - number: "03"
+    title: "Scale"
+    description: "Accelerating growth and market expansion. We help organizations achieve sustainable growth by strengthening market presence, expanding customer reach, and implementing integrated marketing strategies across digital and offline channels."
+    tags:
+      - "Growth Strategy"
+      - "Integrated Marketing"
+      - "Market Expansion"
+      - "Brand Positioning"
+    outcome: "Outcome: We grow the business."
+
+  - number: "04"
+    title: "Transfer"
+    description: "Transitioning to independent success. We prepare organizations for long-term success by establishing operational independence, leadership continuity, and strategic readiness for investment, transition, or exit."
+    tags:
+      - "Leadership Transition"
+      - "Investment Readiness"
+      - "Exit Planning"
+    outcome: "Outcome: We transfer a self-sustaining business back to its owners."

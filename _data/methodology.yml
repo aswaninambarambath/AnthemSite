@@ -1,0 +1,18 @@
+section_label: "Our Methodology"
+section_title: "The Build Operate Scale Transfer Model"
+section_subtitle: "A structured approach that enables organizations to launch, manage, and grow businesses with greater operational clarity and reduced risk."
+section_extra: "The BOT model allows organizations to confidently establish and expand businesses in new or existing markets while benefiting from experienced execution at every stage of growth."
+
+steps:
+  - letter: "B"
+    title: "Build"
+    description: "Establish strategic direction, technology foundations, and operational structure required to bring a business idea to life."
+  - letter: "O"
+    title: "Operate"
+    description: "Manage execution, optimize processes, and ensure operational stability through structured leadership and ongoing support."
+  - letter: "S"
+    title: "Scale"
+    description: "Accelerate growth through integrated marketing, market expansion strategies, and performance optimization across channels."
+  - letter: "T"
+    title: "Transfer"
+    description: "Prepare the organization for independence by enabling leadership continuity, operational readiness, and long-term sustainability."

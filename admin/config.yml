@@ -1,0 +1,154 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  # ── Blog Posts ──
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Icon (emoji)", name: "icon", widget: "string", default: "📝" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ── Site Content (Data Files) ──
+  - name: "data"
+    label: "Site Content"
+    editor:
+      preview: false
+    files:
+      # Hero Section
+      - label: "Hero Section"
+        name: "hero"
+        file: "_data/hero.yml"
+        fields:
+          - { label: "Tag Line", name: "tag", widget: "string" }
+          - { label: "Title Line 1", name: "title_line1", widget: "string" }
+          - { label: "Title Line 2", name: "title_line2", widget: "string" }
+          - { label: "Title Highlight (gold text)", name: "title_highlight", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Primary Button Text", name: "button_primary", widget: "string" }
+          - { label: "Secondary Button Text", name: "button_secondary", widget: "string" }
+          - { label: "Badge 1 Text", name: "badge1", widget: "string" }
+          - { label: "Badge 2 Text", name: "badge2", widget: "string" }
+          - { label: "Badge 3 Text", name: "badge3", widget: "string" }
+
+      # Stats
+      - label: "Stats Bar"
+        name: "stats"
+        file: "_data/stats.yml"
+        fields:
+          - label: "Stats"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+      # Pillars
+      - label: "Service Pillars"
+        name: "pillars"
+        file: "_data/pillars.yml"
+        fields:
+          - { label: "Section Label", name: "section_label", widget: "string" }
+          - { label: "Section Title", name: "section_title", widget: "string" }
+          - { label: "Section Subtitle", name: "section_subtitle", widget: "text" }
+          - label: "Pillars"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
+              - { label: "Outcome", name: "outcome", widget: "string" }
+
+      # Methodology
+      - label: "BOT Methodology"
+        name: "methodology"
+        file: "_data/methodology.yml"
+        fields:
+          - { label: "Section Label", name: "section_label", widget: "string" }
+          - { label: "Section Title", name: "section_title", widget: "string" }
+          - { label: "Section Subtitle", name: "section_subtitle", widget: "text" }
+          - { label: "Extra Description", name: "section_extra", widget: "text" }
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            fields:
+              - { label: "Letter", name: "letter", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      # Founder
+      - label: "Founder Section"
+        name: "founder"
+        file: "_data/founder.yml"
+        fields:
+          - { label: "Section Label", name: "section_label", widget: "string" }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Photo", name: "image", widget: "image" }
+          - { label: "Badge Text", name: "badge", widget: "string" }
+          - { label: "Bio Paragraph 1", name: "bio_paragraph1", widget: "text" }
+          - { label: "Bio Paragraph 2", name: "bio_paragraph2", widget: "text" }
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            fields:
+              - { label: "Emoji", name: "emoji", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      # Clients
+      - label: "Who We Help"
+        name: "clients"
+        file: "_data/clients.yml"
+        fields:
+          - { label: "Section Label", name: "section_label", widget: "string" }
+          - { label: "Section Title", name: "section_title", widget: "string" }
+          - label: "Client Types"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Icon (emoji)", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      # Recognition
+      - label: "Recognition"
+        name: "recognition"
+        file: "_data/recognition.yml"
+        fields:
+          - { label: "Section Label", name: "section_label", widget: "string" }
+          - { label: "Section Title", name: "section_title", widget: "string" }
+          - { label: "Section Subtitle", name: "section_subtitle", widget: "text" }
+          - label: "Badges"
+            name: "badges"
+            widget: "list"
+            fields:
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      # CTA
+      - label: "Call to Action"
+        name: "cta"
+        file: "_data/cta.yml"
+        fields:
+          - { label: "Section Label", name: "section_label", widget: "string" }
+          - { label: "Title Line 1", name: "title_line1", widget: "string" }
+          - { label: "Title Line 2", name: "title_line2", widget: "string" }
+          - { label: "Highlight Word", name: "title_highlight", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Primary Button", name: "button_primary", widget: "string" }
+          - { label: "Secondary Button", name: "button_secondary", widget: "string" }
